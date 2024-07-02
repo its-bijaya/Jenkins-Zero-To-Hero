@@ -22,10 +22,7 @@ pipeline {
     stage('Static Code Analysis') {
         steps {
              sh '''
-                    $SCANNER_HOME/bin/sonar-scanner \
                         -Dsonar.projectKey=ultimate-cicd \
-                        -Dsonar.sources=. \
-                        -Dsonar.java.binaries=. \
                         -Dsonar.host.url=http://localhost:9000 \
                         -Dsonar.login=squ_c3616cfe73b0a09d72d70ace6a4d1478022b5277
                 '''
